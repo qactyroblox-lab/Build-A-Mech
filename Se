@@ -1,0 +1,19 @@
+game:GetService("ReplicatedStorage").Packages.Knit.Services.GameHandler.RE.Launch:FireServer()
+wait(1)
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+-- Wait until the HumanoidRootPart is available
+local hrp = character:WaitForChild("HumanoidRootPart")
+
+-- Teleport position
+local targetPosition = Vector3.new(249, 12, 4600000000)
+
+-- Teleport the character
+hrp.CFrame = CFrame.new(targetPosition)
+wait()
+local args = {
+    [1] = false
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.GameHandler.RE.Launch:FireServer(unpack(args))
