@@ -7,7 +7,7 @@ local character = player.Character or player.CharacterAdded:Wait()
 local hrp = character:WaitForChild("HumanoidRootPart")
 
 -- Teleport position
-local targetPosition = Vector3.new(249, 12, 46000000)
+local targetPosition = Vector3.new(249, 12, 4600000)
 
 -- Teleport the character
 hrp.CFrame = CFrame.new(targetPosition)
